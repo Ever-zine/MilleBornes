@@ -52,7 +52,7 @@ console.log(J1.montreDeck());
 
 //tour de J1
 let compteurVitesse = create("p", body);
-let listeCartesVitesse = create("p", body);
+//let listeCartesVitesse = create("p", body);
 
 for(let carte of J1.deck) {
     let btnCarte = create("button", body, carte.nom, null, null);
@@ -61,12 +61,12 @@ for(let carte of J1.deck) {
         carte.action(J1);
         //console.log(J1.montreDeck());
         console.log(J1.calculeVitesse());
-        
+
         compteurVitesse.remove();
-        listeCartesVitesse.remove();
+        //listeCartesVitesse.remove();
 
         compteurVitesse = create("p", body, J1.calculeVitesse());
-        listeCartesVitesse = afficheCartesUneAUne(J1.cartesVitesse);
+        //listeCartesVitesse = afficheCartesUneAUne(J1.cartesVitesse);
     })
 }
 
