@@ -1,0 +1,87 @@
+function create(tag, parent, text, classs=null, id=null) {
+	let element = document.createElement(tag)
+	if (text)
+		element.appendChild(document.createTextNode(text))
+	parent.appendChild(element)
+	if (classs)
+		element.classList.add(classs)
+	if (id)
+		element.id = id
+	return element
+}
+
+
+let cartes = [
+    {
+        "nom" : "50kph",
+        "type" : "vitesse",
+        "vitesse" : 50
+    },
+    {
+        "nom" : "70kph",
+        "type" : "vitesse",
+        "vitesse" : 70
+    },
+    {
+        "nom" : "feuVert",
+        "type" : "feu",
+        "fonction" : true
+    },
+    {
+        "nom" : "feuRouge",
+        "type" : "feu",
+        "fonction" : false
+    }
+]
+
+let Joueurs = [
+    {
+        "nom" : "J1",
+        "deck" : [],
+        "roule" : false,
+        "vitesse" : 0
+    },
+    {
+        "nom" : "J2",
+        "deck" : [],
+        "roule" : false,
+        "vitesse" : 0
+    }
+]
+
+let body = document.querySelector("body");
+
+//Jeu :
+let jeuEnCours = true;
+
+//Mise en place du jeu :
+Joueurs = cartes;
+deckJ2 = cartes;
+
+while(jeuEnCours) {
+    for(let i = 1; i <= nbJoueurs; i++) {
+        
+    }
+}
+
+for(let carte of cartes) {
+    let button = create("button", body, carte.nom, "btn"+carte.nom);
+
+    button.addEventListener("click", function() {
+        if (carte.type == "feu") {
+            roule = carte.fonction;
+        }
+
+        if (carte.type == "vitesse" && roule) {
+            vitesse += carte.vitesse;
+            console.log(vitesse);
+        } else if (!roule) {
+            console.log("eh oh tu reoules pas");
+        }
+    })
+
+}
+
+function UtiliserCarte(carte, deckJ1) {
+    
+}
