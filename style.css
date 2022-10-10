@@ -1,7 +1,40 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+
 .btn50kph {
     color: green;
 }
 
 .btn70kph {
     color: green;
+}
+
+#deck {
+    width: 50vw;
+    height: 50vh;
+    border: solid 1px black;
+    background-color: grey;
+}
+
+#pioches {
+    width: 50vw;
+    height: 50vh;
+    border: solid 1px black;
+    background-color: grey;
+}
+
+#distance {
+    width: 25vw;
+    height: 100vh;
+    border: solid 1px black;
+    background-color: grey;
+}
+
+#cartes {
+    width: 25vw;
+    height: 100vh;
+    border: solid 1px black;
+    background-color: grey;
 }

@@ -35,6 +35,7 @@ let cartes = [
 ]
 
 let body = document.querySelector("body");
+let deck = document.querySelector("#deck");
 
 
 let J2 = new Joueur("Andouillette", []);
@@ -55,7 +56,7 @@ let compteurVitesse = create("p", body);
 //let listeCartesVitesse = create("p", body);
 
 for(let carte of J1.deck) {
-    let btnCarte = create("button", body, carte.nom, null, null);
+    let btnCarte = create("button", deck, carte.nom, null, null);
 
     btnCarte.addEventListener("click", function() {
         carte.action(J1);
